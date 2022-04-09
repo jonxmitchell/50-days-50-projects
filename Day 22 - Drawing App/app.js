@@ -121,6 +121,8 @@ clearEL.addEventListener("click", () => {
     "Press OK if you want to delete your drawing\nPress Cancel if you do not want to delete your drawing";
   if (confirm(text) === true) {
     ctx.clearRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = "white";
+    ctx.fillRect(0, 0, 800, 800);
   } else {
     return;
   }
