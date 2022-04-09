@@ -54,7 +54,7 @@ canvas {
 
 .toolbox > *:last-child {
   margin-left: auto;
-  width: 200px;
+  width: 125px;
 }
 
 button:active {
