@@ -67,10 +67,10 @@ function updateSizeOnScreen() {
 
 function DownloadCanvasAsImage() {
   let downloadLink = document.createElement("a");
-  downloadLink.setAttribute("download", "CanvasAsImage.jpeg");
-  let dataURL = canvas.toDataURL("image/jpeg");
+  downloadLink.setAttribute("download", "CanvasAsImage.png");
+  let dataURL = canvas.toDataURL("image/png");
   let url = dataURL.replace(
-    /^data:image\/jpeg/,
+    /^data:image\/png/,
     "data:application/octet-stream"
   );
   downloadLink.setAttribute("href", url);
