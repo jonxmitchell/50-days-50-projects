@@ -14,6 +14,11 @@ let color = "black";
 let x;
 let y;
 
+window.onload = function () {
+  ctx.fillStyle = "white";
+  ctx.fillRect(0, 0, 800, 800);
+};
+
 canvas.addEventListener("mousedown", (e) => {
   isPressed = true;
 
@@ -60,6 +65,19 @@ function updateSizeOnScreen() {
   sizeEl.innerText = size;
 }
 
+function DownloadCanvasAsImage() {
+  let downloadLink = document.createElement("a");
+  downloadLink.setAttribute("download", "CanvasAsImage.jpeg");
+  let dataURL = canvas.toDataURL("image/jpeg");
+  let url = dataURL.replace(
+    /^data:image\/jpeg/,
+    "data:application/octet-stream"
+  );
+  downloadLink.setAttribute("href", url);
+  downloadLink.click();
+  alert("You image has been downloaded :)");
+}
+
 increaseBtn.addEventListener("click", () => {
   size += 1;
   if (size > 50) {
@@ -98,6 +116,13 @@ decreaseMoreBtn.addEventListener("click", () => {
 
 colorEl.addEventListener("change", (e) => (color = e.target.value));
 
-clearEL.addEventListener("click", () =>
-  ctx.clearRect(0, 0, canvas.width, canvas.height)
-);
+clearEL.addEventListener("click", () => {
+  let text =
+    "Press OK if you want to delete your drawing\nPress Cancel if you do not want to delete your drawing";
+  if (confirm(text) === true) {
+    ctx.clearRect(0, 0, canvas.width, canvas.height);
+  } else {
+    return;
+  }
+  // ctx.clearRect(0, 0, canvas.width, canvas.height);
+});
