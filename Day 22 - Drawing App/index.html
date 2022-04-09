@@ -12,12 +12,17 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>My Project</title>
+    <title>Drawing App</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
-    <h2>Hello</h2>
-    <h2>Hello</h2>
+    <canvas class="canvas" width="800" height="800"></canvas>
+    <div class="toolbox">
+      <button id="decrease">-</button>
+      <span id="size">20</span>
+      <button id="increase">+</button>
+      <input type="color" id="color" />
+      <button id="clear">Clear</button>
+    </div>
     <script src="./app.js"></script>
   </body>
 </html>
