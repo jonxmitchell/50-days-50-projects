@@ -1,6 +1,8 @@
 const canvas = document.getElementById("canvas");
 const increaseBtn = document.getElementById("increase");
+const increaseMoreBtn = document.getElementById("increasemore");
 const decreaseBtn = document.getElementById("decrease");
+const decreaseMoreBtn = document.getElementById("decreasemore");
 const sizeEl = document.getElementById("size");
 const colorEl = document.getElementById("color");
 const clearEL = document.getElementById("clear");
@@ -67,8 +69,26 @@ increaseBtn.addEventListener("click", () => {
   updateSizeOnScreen();
 });
 
+increaseMoreBtn.addEventListener("click", () => {
+  size += 5;
+  if (size > 50) {
+    size = 50;
+  }
+
+  updateSizeOnScreen();
+});
+
 decreaseBtn.addEventListener("click", () => {
   size -= 1;
+  if (size < 1) {
+    size = 1;
+  }
+
+  updateSizeOnScreen();
+});
+
+decreaseMoreBtn.addEventListener("click", () => {
+  size -= 5;
   if (size < 1) {
     size = 1;
   }
