@@ -12,12 +12,39 @@
       referrerpolicy="no-referrer"
     />
     <link rel="stylesheet" href="./style.css" />
-    <title>My Project</title>
+    <title>Github Profiles</title>
   </head>
   <body>
-    <h1>Project Starter</h1>
-    <h2>Hello</h2>
-    <h2>Hello</h2>
+    <form class="user-form" id="form">
+      <input type="text" id="search" placeholder="Search a Github User" />
+    </form>
+
+    <main id="main">
+      <div class="card">
+        <div class="">
+          <img src="https://randomuser.me/api/portraits/men/30.jpg" alt="" />
+        </div>
+        <div class="user-info">
+          <h2>Jon Mitchell</h2>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam,
+            tempora.
+          </p>
+          <ul>
+            <li>300 <strong>Followers</strong></li>
+            <li>100 <strong>Following</strong></li>
+            <li>30 <strong>Repos</strong></li>
+          </ul>
+
+          <div id="repos">
+            <a href="#" class="repos">Repos 1</a>
+            <a href="#" class="repos">Repos 2</a>
+            <a href="#" class="repos">Repos 3</a>
+          </div>
+        </div>
+      </div>
+    </main>
+
     <script src="./app.js"></script>
   </body>
 </html>
